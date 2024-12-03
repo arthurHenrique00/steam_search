@@ -4,9 +4,10 @@ export const HeaderStyled = styled.header`
   border-radius: 12px;
   margin: 0 auto;
   width: 500px;
-  padding: 12px;
+  padding: 16px;
   margin-top: 36px;
   background-color: black;
+  position: sticky;
 
   .first-header {
     display: flex;
@@ -21,9 +22,10 @@ export const HeaderStyled = styled.header`
 
     input {
       background-color: gray;
-      border-radius: 4px;
-      border-color: white;
+      border-radius: 12px;
       color: white;
+      border: none;
+      padding: 4px;
     }
 
     > img {
@@ -33,6 +35,14 @@ export const HeaderStyled = styled.header`
     button {
       background: transparent;
       border: none;
+
+      img {
+        transition: transform 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
     }
   }
 

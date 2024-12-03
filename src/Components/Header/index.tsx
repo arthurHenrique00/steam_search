@@ -14,7 +14,7 @@ const Header = () => (
       </button>
     </div>
     <div className="steamid">
-      <i>Se não souber o steam id se o SteamID I/O</i>
+      <i>Se não souber o steam id use o SteamID I/O</i>
       <a href="https://steamid.io/lookup" target="_blank" rel="noreferrer">
         <img src={steamid_logo} />
       </a>
