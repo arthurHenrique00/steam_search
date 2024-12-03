@@ -8,11 +8,13 @@ export const HeaderStyled = styled.header`
   margin-top: 36px;
   background-color: black;
   position: sticky;
+  margin-bottom: 64px;
 
   .first-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 12px;
 
     label {
       font-size: 12px;
@@ -35,12 +37,13 @@ export const HeaderStyled = styled.header`
     button {
       background: transparent;
       border: none;
+      cursor: pointer;
 
       img {
         transition: transform 0.2s;
 
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.3);
         }
       }
     }
@@ -50,10 +53,11 @@ export const HeaderStyled = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 22px;
+    padding-top: 12px;
     color: white;
     font-size: 12px;
     color: gray;
+    border-top: 1px solid gray;
 
     img {
       border-radius: 9px;
