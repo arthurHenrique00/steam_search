@@ -94,7 +94,7 @@ export const Recommended = styled.div`
 
   .games {
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
 
     .games-item {
       border: 1px solid gray;
@@ -105,23 +105,15 @@ export const Recommended = styled.div`
       background-size: cover;
       transition: transform 0.2s;
       margin-right: 22px;
+      width: 300px;
+      padding: 18px;
 
       &:hover {
         transform: scale(1.1);
       }
 
       h2 {
-        font-size: 16px;
-        margin-top: 12px;
-      }
-
-      img {
-        padding: 12px;
-      }
-
-      p {
-        padding: 12px;
-        font-size: 12px;
+        padding: 22px;
       }
     }
   }
