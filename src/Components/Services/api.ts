@@ -4,6 +4,13 @@ type Game = {
   name: string
   header_image: string
   short_description: string
+  price_overview: {
+    initial_formatted: string
+  }
+  pc_requirements: {
+    minimun: string
+    recommended: string
+  }
 }
 
 export const apiFirst = createApi({
@@ -23,6 +30,14 @@ export const apiFirst = createApi({
     getHeaderImage: builder.query<Game, void>({
       query: () => 'appdetails?appids=1091500',
       transformResponse: (response: any) => response['1091500'].data
+    }),
+    getPrice: builder.query<Game, void>({
+      query: () => 'appdetails?appids=1091500',
+      transformResponse: (response: any) => response['1091500'].data
+    }),
+    getRequirements: builder.query<Game, void>({
+      query: () => 'appdetails?appids=1091500',
+      transformResponse: (response: any) => response['1091500'].data
     })
   })
 })
@@ -30,5 +45,7 @@ export const apiFirst = createApi({
 export const {
   useGetAboutGameQuery,
   useGetHeaderImageQuery,
-  useGetTitleGameQuery
+  useGetTitleGameQuery,
+  useGetPriceQuery,
+  useGetRequirementsQuery
 } = apiFirst
