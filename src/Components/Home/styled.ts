@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import background_game from '../../img/games-bg.jpg'
 
 const cyber_bg =
   'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/page.bg.jpg?t=1730212296'
@@ -71,6 +72,12 @@ export const First = styled.div`
           transform: scale(1.1);
         }
       }
+
+      .pc-requirements {
+        padding: 12px;
+        border: 2px solid gray;
+        border-radius: 4px;
+      }
     }
   }
 `
@@ -78,4 +85,45 @@ export const First = styled.div`
 export const Recommended = styled.div`
   padding: 64px;
   color: white;
+
+  > h2 {
+    margin: 32px 64px;
+  }
+
+  .games {
+    display: flex;
+    margin: 0 auto;
+    width: 1020px;
+
+    .games-item {
+      width: 300px;
+      border: 1px solid gray;
+      border-radius: 3px;
+      text-align: center;
+      background-image: url(${background_game});
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: transform 0.2s;
+      margin-right: 22px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      h2 {
+        font-size: 16px;
+        margin-top: 12px;
+      }
+
+      img {
+        padding: 12px;
+        width: 250px;
+      }
+
+      p {
+        padding: 12px;
+        font-size: 12px;
+      }
+    }
+  }
 `
