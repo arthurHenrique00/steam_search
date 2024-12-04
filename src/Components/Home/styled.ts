@@ -83,8 +83,10 @@ export const First = styled.div`
 `
 
 export const Recommended = styled.div`
-  padding: 64px;
+  display: block;
+
   color: white;
+  width: 100%;
 
   > h2 {
     margin: 32px 64px;
@@ -93,10 +95,8 @@ export const Recommended = styled.div`
   .games {
     display: flex;
     margin: 0 auto;
-    width: 1020px;
 
     .games-item {
-      width: 300px;
       border: 1px solid gray;
       border-radius: 3px;
       text-align: center;
@@ -117,7 +117,6 @@ export const Recommended = styled.div`
 
       img {
         padding: 12px;
-        width: 250px;
       }
 
       p {

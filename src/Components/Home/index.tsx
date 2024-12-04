@@ -29,6 +29,22 @@ const Home = () => {
   const { data: jediTitle } = useGetNameGameQuery('1172380')
   const { data: jediAbout } = useGetAboutGameQuery('1172380')
 
+  const { data: hogImg } = useGetHeaderImageQuery('990080')
+  const { data: hogTitle } = useGetNameGameQuery('990080')
+  const { data: hogAbout } = useGetAboutGameQuery('990080')
+
+  const { data: tlouImg } = useGetHeaderImageQuery('1888930')
+  const { data: tlouTitle } = useGetNameGameQuery('1888930')
+  const { data: tlouAbout } = useGetAboutGameQuery('1888930')
+
+  const { data: ragImg } = useGetHeaderImageQuery('2322010')
+  const { data: ragTitle } = useGetNameGameQuery('2322010')
+  const { data: ragAbout } = useGetAboutGameQuery('2322010')
+
+  const { data: tekImg } = useGetHeaderImageQuery('1778820')
+  const { data: tekTitle } = useGetNameGameQuery('1778820')
+  const { data: tekAbout } = useGetAboutGameQuery('1778820')
+
   return (
     <>
       <First>
@@ -75,6 +91,29 @@ const Home = () => {
             <img src={rdr2Img?.capsule_image} />
             <h2>{rdr2Title?.name}</h2>
             <p>{rdr2About?.short_description}</p>
+          </div>
+        </div>
+        <h2>Últimos Lançamentos</h2>
+        <div className="games">
+          <div className="games-item">
+            <img src={hogImg?.capsule_image} />
+            <h2>{hogTitle?.name}</h2>
+            <p>{hogAbout?.short_description}</p>
+          </div>
+          <div className="games-item">
+            <img src={tlouImg?.capsule_image} />
+            <h2>{tlouTitle?.name}</h2>
+            <p>{tlouAbout?.short_description}</p>
+          </div>
+          <div className="games-item">
+            <img src={ragImg?.capsule_image} />
+            <h2>{ragTitle?.name}</h2>
+            <p>{ragAbout?.short_description}</p>
+          </div>
+          <div className="games-item">
+            <img src={tekImg?.capsule_image} />
+            <h2>{tekTitle?.name}</h2>
+            <p>{tekAbout?.short_description}</p>
           </div>
         </div>
       </Recommended>
