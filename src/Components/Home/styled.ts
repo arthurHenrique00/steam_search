@@ -1,38 +1,48 @@
 import styled from 'styled-components'
 
+const cyber_bg =
+  'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/page.bg.jpg?t=1730212296'
+
 export const First = styled.div`
   padding: 22px;
   margin: 0 auto;
-  background-color: rgba(26, 23, 61, 0.3);
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
   width: 1200px;
   border-radius: 22px;
   display: flex;
-  color: white;
+  color: black;
   align-items: center;
+  font-weight: bold;
 
-  .banner {
-    h2 {
-      margin-bottom: 12px;
-      color: white;
-    }
-
-    img {
-      border-radius: 9px;
-      margin: 64px;
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(${cyber_bg});
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
   }
 
-  .infos {
+  img {
+    border-radius: 12px;
+  }
+
+  .info {
+    display: block;
+    margin-left: 32px;
+
+    ul {
+      list-style: none;
+    }
+
     .images-game {
       display: flex;
+      width: 150px;
+      height: 70px;
 
       img {
-        border-radius: 12px;
-        width: 150px;
-        height: 70px;
-        margin-right: 12px;
+        margin-right: 22px;
         transition: transform 0.2s;
 
         &:hover {
@@ -42,19 +52,30 @@ export const First = styled.div`
     }
 
     p {
-      width: 500px;
-      margin: 36px 0;
+      padding: 32px 0;
     }
-      .requirements {
+
+    .requirements {
       display: flex;
+      align-items: center;
+
       span {
-        border-radius: 12px;
-        font-weight: bold;
-        margin-right: 12px;
+        margin-right: 22px;
+        background-color: green;
         padding: 12px;
-        flex-grow: 1;
-      }
+        border-radius: 12px;
+        color: white;
+        transition: transform 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }
+`
+
+export const Recommended = styled.div`
+  padding: 64px;
+  color: white;
 `
