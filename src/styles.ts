@@ -15,6 +15,20 @@ const GlobalStyle = createGlobalStyle`
     background-image: url(${background});
     background-repeat: no-repeat;
     background-size: cover;
+
+
+      #price {
+        margin-right: 22px;
+        background-color: green;
+        padding: 12px;
+        border-radius: 12px;
+        color: white;
+        transition: transform 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
   }
 `
 export default GlobalStyle

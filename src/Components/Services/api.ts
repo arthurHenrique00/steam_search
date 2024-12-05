@@ -28,9 +28,9 @@ export const apiFirst = createApi({
       query: (gameId) => `appdetails?appids=${gameId}`,
       transformResponse: (response: any, meta, gameId) => response[gameId].data
     }),
-    getPrice: builder.query<Game, void>({
-      query: () => 'appdetails?appids=1091500',
-      transformResponse: (response: any) => response['1091500'].data
+    getPrice: builder.query<Game, string>({
+      query: (gameId) => `appdetails?appids=${gameId}`,
+      transformResponse: (response: any, meta, gameId) => response[gameId].data
     }),
     getRequirements: builder.query<Game, string>({
       query: () => 'appdetails?appids=1091500',

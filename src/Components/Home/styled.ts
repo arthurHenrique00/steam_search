@@ -60,19 +60,6 @@ export const First = styled.div`
       display: flex;
       align-items: center;
 
-      span {
-        margin-right: 22px;
-        background-color: green;
-        padding: 12px;
-        border-radius: 12px;
-        color: white;
-        transition: transform 0.2s;
-
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-
       .pc-requirements {
         padding: 12px;
         border: 2px solid gray;
@@ -115,6 +102,19 @@ export const Recommended = styled.div`
         padding: 22px;
       }
 
+      p{
+      margin-bottom: 22px;
+      cursor: pointer;
+      }
+
+      .expanded {
+      white-space: normal;
+      }
+
+      #price {
+      margin: auto;
+      }
+
       &::before {
         content: '';
         position: absolute;
@@ -130,7 +130,6 @@ export const Recommended = styled.div`
         transform: translate(0, 0);
         transition: transform 0.5s ease;
         z-index: 1;
-        pointer-events: none;
       }
 
       &:hover {
@@ -139,6 +138,6 @@ export const Recommended = styled.div`
         &:hover::before {
           transform: translateY(300%);
       }
-      }
+    }
   }
 `
