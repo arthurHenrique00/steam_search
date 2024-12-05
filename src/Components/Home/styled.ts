@@ -95,6 +95,7 @@ export const Recommended = styled.div`
   .games {
     display: flex;
     justify-content: center;
+    margin-bottom: 120px;
 
     .games-item {
       border: 1px solid gray;
@@ -107,14 +108,37 @@ export const Recommended = styled.div`
       margin-right: 22px;
       width: 300px;
       padding: 18px;
-
-      &:hover {
-        transform: scale(1.1);
-      }
+      overflow: hidden;
+      position: relative;
 
       h2 {
         padding: 22px;
       }
-    }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        left: -100px;
+        width: 200%;
+        height: 150px;
+        background: linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.4),
+          rgba(255, 255, 255, 0)
+        );
+        transform: translate(0, 0);
+        transition: transform 0.5s ease;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+
+        &:hover::before {
+          transform: translateY(300%);
+      }
+      }
   }
 `
