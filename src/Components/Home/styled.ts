@@ -80,8 +80,10 @@ export const Recommended = styled.div`
   }
 
   .games {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px;
+    margin: 0 auto;
     margin-bottom: 120px;
 
     .games-item {
@@ -100,6 +102,7 @@ export const Recommended = styled.div`
 
       h2 {
         padding: 22px;
+        font-size: 16px;
       }
 
       p{
@@ -141,3 +144,5 @@ export const Recommended = styled.div`
     }
   }
 `
+
+export const News = styled.aside``

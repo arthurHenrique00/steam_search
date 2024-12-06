@@ -14,6 +14,13 @@ type Game = {
   }
 }
 
+type News = {
+  newsitems: {
+    title: string
+    contents: string
+  }
+}
+
 export const apiFirst = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl:
